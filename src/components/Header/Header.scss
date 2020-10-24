@@ -1,0 +1,28 @@
+@import '../../styles/main.scss';
+
+.Header {
+  padding: 100px 100px 0;
+  display: flex;
+
+  &-Logo {
+    &Image {
+      margin-right: 15px;
+    }
+
+    &Text {
+      padding-bottom: 4px;
+    }
+  }
+
+  nav {
+    margin-left: auto;
+    padding-top: 20px;
+    
+    a {
+      font-family: Arial;
+      color: black;
+      text-decoration: none;
+      margin-left: 30px;
+    }
+  }
+}

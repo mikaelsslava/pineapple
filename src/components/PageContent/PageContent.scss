@@ -1,0 +1,20 @@
+@import '../../styles/main.scss';
+
+.PageContent {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+
+  &-Left {
+    display: block;
+    background-color: black;
+    width: 680px;
+    background: linear-gradient(180deg, $default-primary-white 0%, $default-secondary-white 100%);
+  }
+
+  &-Right {
+    height: 100vh;
+    overflow: hidden;
+    width: calc(100vw - 680px);
+  }
+}
