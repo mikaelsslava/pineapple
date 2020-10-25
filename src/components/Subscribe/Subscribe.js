@@ -1,6 +1,7 @@
 import React from 'react';
 import './Subscribe.scss';
 import Form from '../Form/Form';
+import SocialMedia from '../SocialMedia/SocialMedia';
 
 class Subscribe extends React.Component {
 
@@ -12,6 +13,7 @@ class Subscribe extends React.Component {
           <p>Subscribe to our newsletter and get 10% discount on pineapple glasses.</p>
         </div>
           <Form />
+          <SocialMedia />
       </div>
     );
   }

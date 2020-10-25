@@ -17,10 +17,9 @@
   nav {
     margin-left: auto;
     padding-top: 20px;
-    
     a {
       font-family: Arial;
-      color: black;
+      color: $default-text-color;
       text-decoration: none;
       margin-left: 30px;
     }

@@ -1,3 +1,5 @@
+@import '../abstracts/variables';
+
 *, *:before, *:after{
     box-sizing: border-box;
 }
@@ -12,6 +14,20 @@ html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockq
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     text-size-adjust: none;
+}
+
+a {
+  color: $default-heading-color;
+  transition: color 300ms;
+
+  &:hover {
+    color: $default-blue;
+  }
+
+  &:active {
+    color: $default-link-pressed;
+  }
+
 }
 
 footer, header, nav, section, main{

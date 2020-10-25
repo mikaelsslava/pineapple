@@ -1,8 +1,12 @@
 @import '../../styles/main.scss';
 
 .Form {
+  display: flex;
+  border-bottom: solid 1px $default-gray;
+  height: 202px;
 
   &-EmailInput {
+    outline: none;
     width: 680px;
     position: absolute;
     left: 100px;
@@ -14,13 +18,47 @@
     border-left-color: $default-blue;
     border-left-width: 4px;
     padding-left: 40px;
+    padding-top: 3px;
     font-family: Arial;
     line-height: 1.2;
     font-size: 16px;
+    transition: box-shadow 300ms, border-color ease-in 300ms;
 
-    &::after {
-      background-image: url(./images/ic_arrow.svg);
-      content: ' ';
+    &:hover, &:focus { // TODO: create mxins for this
+      -moz-box-shadow: 0 20px 35px 0 $shadow-color;
+      -webkit-box-shadow: 0 20px 35px 0 $shadow-color;
+      box-shadow: 0 20px 35px 0 $shadow-color;
+    }
+
+    &:focus {
+      border-color: $default-blue;
+    }
+
+    &Wrapper {
+
+      &Arrow {
+        mask-image: url('/styles/images/icons/ic_arrow.svg');
+        mask-repeat: no-repeat;
+        background-color: $default-heading-color;
+        background-position: 2px;
+        position: absolute;
+        z-index: 1;
+        content: '';
+        display: block;
+        height: 15px;
+        width: 25px;
+        mask-size: 24px;
+        margin-left: 559px;
+        margin-top: 30px;
+        transition: background-color 300ms;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $default-blue;
+        }
+      }
+
+
     }
   }
 
@@ -32,10 +70,15 @@
     border-radius: 3px;
     margin-top: 124px;
     margin-left: 0;
+    transition: background-color 250ms;
+    outline: none;
 
     &:checked {
       background-color: $default-blue;
-      webkit-mask-box-image: $icon-checker;
+      background-image: url('/styles/images/icons/ic_checkmark.svg');
+      background-repeat: no-repeat;
+      background-size: 14px;
+      background-position: 5px;
     }
   }
   &-CheckboxLabel {
@@ -43,6 +86,15 @@
     font-size: 16px;
     margin-top: 130px;
     margin-left: 12px;
+    color: $default-text-color;
+
+    a {
+      color: $default-heading-color;
+      border-bottom: 1px solid $default-heading-color;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
-  &-Submit {}
 }

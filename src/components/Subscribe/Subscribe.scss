@@ -3,21 +3,24 @@
 .Subscribe {
   display: block;
   padding: 0 140px 0;
+  overflow-y: scroll; 
 
   &-TopText {
     padding-top: 237px;
 
     h1 {
+      color: $default-heading-color;
       font-family: Georgia;
       font-size: 32px;
       padding-bottom: 22px;
     }
 
     p {
+      color: $default-text-color;
       font-family: Arial;
       font-size: 16px;
-      line-height: 1.7;
-      padding-bottom: 51px;
+      line-height: 1.75;
+      padding-bottom: 49px;
     }
   }
 }
