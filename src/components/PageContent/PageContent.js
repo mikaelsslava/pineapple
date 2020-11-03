@@ -8,8 +8,8 @@ class PageContent extends React.Component {
   render() {
     return (
       <div className="PageContent">
+        <Header />
         <div className="PageContent-Left">
-          <Header />
           <Subscribe />
         </div>
         <div className="PageContent-Right">
