@@ -1,0 +1,122 @@
+@import '../../styles/main.scss';
+
+.Form {
+  display: flex;
+  border-bottom: solid 1px $default-gray;
+  height: 202px;
+
+  @include mobile-width {
+    flex-wrap: wrap;
+    height: 129px;
+  }
+
+  &-EmailInput {
+    outline: none;
+    width: 663px;
+    position: absolute;
+    left: 100px;
+    height: 70px;
+    border: 1px solid $default-gray;
+    border-left-color: $default-blue;
+    border-left-width: 4px;
+    padding-left: 40px;
+    padding-top: 3px;
+    font-family: Arial;
+    line-height: 1.2;
+    font-size: 16px;
+    transition: box-shadow 300ms, border-color ease-in 300ms;
+
+    @include mobile-width {
+        width: 295px;
+        position: relative;
+        padding-left: 15px;
+        left: 0;
+        height: 60px;
+    }
+
+    &:hover, &:focus { // TODO: create mxins for this
+      @include box-shadow(0, 20px, 35px, 0, $shadow-color);
+    }
+
+    &:focus {
+      border-color: $default-blue;
+    }
+
+    &Wrapper {
+      @include mobile-width {
+        flex: 0 1 100%;
+      }
+
+      &Arrow {
+        mask-image: url('/styles/images/icons/ic_arrow.svg');
+        mask-repeat: no-repeat;
+        background-color: $default-heading-color;
+        background-position: 2px;
+        position: absolute;
+        z-index: 1;
+        content: '';
+        display: block;
+        height: 15px;
+        width: 25px;
+        mask-size: 24px;
+        margin-left: 559px;
+        margin-top: 28px;
+        transition: background-color 300ms;
+        cursor: pointer;
+
+        @include mobile-width {
+          margin-left: 256px;
+          margin-top: -37px;
+        }
+
+        &:hover {
+          background-color: $default-blue;
+        }
+      }
+    }
+  }
+
+  &-Checkbox {
+    width: 26px;
+    height: 26px;
+    background-color: $default-primary-white;
+    border: 1px solid $default-gray;
+    border-radius: 3px;
+    margin-top: 124px;
+    margin-left: 0;
+    transition: background-color 250ms;
+    outline: none;
+
+    @include mobile-width {
+        margin-top: 3px;
+    }
+
+    &:checked {
+      background-color: $default-blue;
+      background-image: url('/styles/images/icons/ic_checkmark.svg');
+      background-repeat: no-repeat;
+      background-size: 14px;
+      background-position: 5px;
+    }
+  }
+  &-CheckboxLabel {
+    font-family: Arial;
+    font-size: 16px;
+    margin-top: 129px;
+    margin-left: 12px;
+    color: $default-text-color;
+
+    @include mobile-width {
+      margin-top: 8px;
+    }
+
+    a {
+      color: $default-heading-color;
+      border-bottom: 1px solid $default-heading-color;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

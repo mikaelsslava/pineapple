@@ -1,0 +1,99 @@
+@import '../../styles/main.scss';
+
+.SocialMedia {
+  height: 160px;
+
+  @include mobile-width {
+    height: 100px;
+  }
+
+  &-LinksWrapper {
+    display: flex;
+    padding-top: 40px;
+    justify-content: center;
+
+    @include mobile-width {
+      padding-top: 1px;
+      width: 95%;
+    }
+
+    a, a:hover, a:active {
+      color: inherit;
+    }
+  }
+
+  &-Link {
+    height: 46px;
+    width: 46px;
+    border: 2px solid $default-gray;
+    border-radius: 50%;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-position: 13px;
+    transition: background-color 400ms;
+
+    @include mobile-width {
+      margin: 19px 5px 6px;
+    }
+
+    &_facebook {
+      background-image: url('/styles/images/icons/ic_facebook.svg');
+      background-position: 17px;
+
+      &:hover {
+        background-color: $facebook-hover;
+        transition: background-color 300ms;
+        @include box-shadow(0, 20px, 35px, 0, $shadow-color);
+      }
+
+      &:active {
+        background-color: $facebook-active;
+
+      }
+    }
+
+    &_twitter {
+      background-image: url('/styles/images/icons/ic_twitter.svg');
+
+      &:hover {
+        background-color: $twitter-hover;
+        transition: background-color 300ms;
+        @include box-shadow(0, 20px, 35px, 0, $shadow-color);
+      }
+
+      &:active {
+        background-color: $twitter-active;
+      }
+    }
+
+    &_instagram {
+      background-image: url('/styles/images/icons/ic_instagram.svg');
+
+      &:hover {
+        background-color: $instagram-hover;
+        transition: background-color 300ms;
+        @include box-shadow(0, 20px, 35px, 0, $shadow-color);
+      }
+
+      &:active {
+        background-color: $instagram-active;
+      }
+    }
+
+    &_youtube {
+      background-image: url('/styles/images/icons/ic_youtube.svg');
+
+      background-position-y: 15px;
+
+      &:hover {
+        background-color: $youtube-hover;
+        transition: background-color 300ms;
+        @include box-shadow(0, 20px, 35px, 0, $shadow-color);
+      }
+
+      &:active {
+        background-color: $youtube-active;
+      }
+    }
+  }
+}
