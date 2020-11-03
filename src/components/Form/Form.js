@@ -3,12 +3,8 @@ import './Form.scss';
 
 class Form extends React.Component {
 
-  handleSubmit(event) {
-    event.preventDefault();
-  }
-
-  sth() {
-    console.log('the truth');
+  submitForm() {
+    // insert TASK2 functionality here
   }
 
   render() {
@@ -16,7 +12,7 @@ class Form extends React.Component {
         <form className="Form" onSubmit={this.handleSubmit}>
           <div className="Form-EmailInputWrapper">
             <input className="Form-EmailInput" id="email" type="email" name="email" placeholder="Type your email address here..." required/>
-            <div className="Form-EmailInputWrapperArrow" onClick= { this.sth() }> </div>
+            <div className="Form-EmailInputWrapperArrow" onClick= { this.submitForm() }> </div>
           </div>
           <input className="Form-Checkbox" type="checkbox" id="termsOfService" />
           <div className="Form-CheckboxLabel" for="checkbox">
