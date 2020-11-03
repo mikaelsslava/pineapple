@@ -4,7 +4,7 @@
   height: 160px;
 
   @include mobile-width {
-    height: 90px;
+    height: 100px;
   }
 
   &-LinksWrapper {
@@ -13,8 +13,12 @@
     justify-content: center;
 
     @include mobile-width {
-      padding-top: 0;
+      padding-top: 1px;
       width: 95%;
+    }
+
+    a, a:hover, a:active {
+      color: inherit;
     }
   }
 
@@ -78,12 +82,13 @@
 
     &_youtube {
       background-image: url('/styles/images/icons/ic_youtube.svg');
+
       background-position-y: 15px;
 
       &:hover {
         background-color: $youtube-hover;
         transition: background-color 300ms;
-        @include box-shadow(0, 20px, 35px, 0, $shadow-color); 
+        @include box-shadow(0, 20px, 35px, 0, $shadow-color);
       }
 
       &:active {

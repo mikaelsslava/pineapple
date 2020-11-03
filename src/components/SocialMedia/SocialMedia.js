@@ -3,27 +3,30 @@ import './SocialMedia.scss';
 
 class SocialMedia extends React.Component {
 
-  handleClick() {
-      console.log('asdasd');
-
-  }
-
   render() {
     return (
       <div className="SocialMedia">
         <div className="SocialMedia-LinksWrapper">
-          <div className="SocialMedia-Link SocialMedia-Link_facebook" onclick= { this.handleClick() }>
+          <a href="#">
+            <div className="SocialMedia-Link SocialMedia-Link_facebook">
 
-          </div>
-          <div className="SocialMedia-Link SocialMedia-Link_instagram" onclick= { this.handleClick() }>
+            </div>
+          </a>
+          <a href="#">
+            <div className="SocialMedia-Link SocialMedia-Link_instagram">
 
-          </div>
-          <div className="SocialMedia-Link SocialMedia-Link_twitter" onclick= { this.handleClick() }>
+            </div>
+          </a>
+          <a href="#">
+            <div className="SocialMedia-Link SocialMedia-Link_twitter">
 
-          </div>
-          <div className="SocialMedia-Link SocialMedia-Link_youtube" onclick= { this.handleClick() }>
+            </div>
+          </a>
+          <a href="#">
+            <div className="SocialMedia-Link SocialMedia-Link_youtube">
 
-          </div>
+            </div>
+          </a>
         </div>
       </div>
     );

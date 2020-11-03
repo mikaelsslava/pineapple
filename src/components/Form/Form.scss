@@ -7,7 +7,7 @@
 
   @include mobile-width {
     flex-wrap: wrap;
-    height: 130px
+    height: 129px;
   }
 
   &-EmailInput {
@@ -35,7 +35,7 @@
     }
 
     &:hover, &:focus { // TODO: create mxins for this
-      @include box-shadow(0, 20px, 35px, 0, $shadow-color); 
+      @include box-shadow(0, 20px, 35px, 0, $shadow-color);
     }
 
     &:focus {
@@ -88,7 +88,7 @@
     outline: none;
 
     @include mobile-width {
-        margin-top: 0px;
+        margin-top: 3px;
     }
 
     &:checked {
@@ -102,12 +102,12 @@
   &-CheckboxLabel {
     font-family: Arial;
     font-size: 16px;
-    margin-top: 130px;
+    margin-top: 129px;
     margin-left: 12px;
     color: $default-text-color;
 
     @include mobile-width {
-      margin-top: 7px;
+      margin-top: 8px;
     }
 
     a {
