@@ -1,0 +1,61 @@
+@import '../../styles/main.scss';
+
+.Success {
+  display: block;
+  padding: 0 140px 0;
+  overflow-y: scroll;
+  width: 100%;
+
+  @include mobile-width {
+    padding: 30px 20px 0 20px;
+  }
+
+  &-Icon {
+    mask-image: url('/styles/images/icons/ic_success.svg');
+    mask-repeat: no-repeat;
+    background-color: $default-blue;
+    width: 44px;
+    height: 70px;
+    margin-top: 128px;
+
+    @include mobile-width {
+      margin-top: 0;
+    }
+  }
+
+  &-Text {
+    margin-top: 34px;
+
+    @include mobile-width {
+      margin-top: 39px;
+    }
+
+    h1 {
+      color: $default-heading-color;
+      font-family: Georgia;
+      font-size: 32px;
+      padding-bottom: 25px;
+
+      @include mobile-width {
+        font-size: 24px;
+        line-height: 34px;
+        padding-bottom: 10px;
+      }
+    }
+
+    p {
+      color: $default-text-color;
+      font-family: Arial;
+      font-size: 16px;
+      line-height: 1.75;
+      padding-bottom: 49px;
+      border-bottom: solid 1px $default-gray;
+
+      @include mobile-width {
+        font-size: 14px;
+        line-height: 1.9;
+        padding-bottom: 20px;
+      }
+    }
+  }
+}

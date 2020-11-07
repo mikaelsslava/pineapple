@@ -1,7 +1,6 @@
 import React from 'react';
 import './Form.scss';
 import axios from 'axios';
-import Message from '../Message/Message.js';
 
 class Form extends React.Component {
 
