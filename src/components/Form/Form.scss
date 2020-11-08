@@ -10,6 +10,21 @@
     height: 129px;
   }
 
+  &-Message {
+    transition: opacity 300ms;
+
+    p {
+      position: absolute;
+      margin: 78px 2px 0;
+      font-size: 14px;
+
+      @include mobile-width {
+        margin: 2px 0 0;
+        font-size: 12px;
+      }
+    }
+  }
+
   &-EmailInput {
     outline: none;
     width: 663px;
@@ -34,7 +49,7 @@
         height: 60px;
     }
 
-    &:hover, &:focus { // TODO: create mxins for this
+    &:hover, &:focus {
       @include box-shadow(0, 20px, 35px, 0, $shadow-color);
     }
 
@@ -61,8 +76,9 @@
         mask-size: 24px;
         margin-left: 559px;
         margin-top: 28px;
-        transition: background-color 300ms;
+        transition: background-color 300ms, opacity 300ms;
         cursor: pointer;
+        opacity: 0;
 
         @include mobile-width {
           margin-left: 256px;
