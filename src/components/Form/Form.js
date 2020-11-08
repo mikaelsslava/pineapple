@@ -2,6 +2,13 @@ import React from 'react';
 import './Form.scss';
 import axios from 'axios';
 
+const validationRules = {
+  '!this.state.email' : 'Email address is required',
+  '!/.+@.+\.[A-Za-z]+$/.test(this.state.email)' : 'Please provide a valid e-mail address',
+  'this.state.email.substr(this.state.email.length - 3) === ".co"' : 'We are not accepting subscriptions from Colombia emails',
+  '!this.state.termsOfService' : 'You must accept the terms and conditions'
+}
+
 class Form extends React.Component {
 
   constructor(props) {
@@ -27,41 +34,16 @@ class Form extends React.Component {
   }
 
   validateEmail() {
+    for (let rule in validationRules) {
+      if (eval(rule)) {
+          this.disableArrow();
+          this.setState({
+            message: validationRules[rule],
+            isValidationNeeded: false
+          });
 
-    if (!this.state.email) {
-      this.disableArrow();
-      this.setState({
-        message: 'Email address is required',
-        isValidationNeeded: false
-      });
-      return ;
-    }
-
-    if (!/.+@.+\.[A-Za-z]+$/.test(this.state.email)) {
-      this.disableArrow();
-      this.setState({
-        message: 'Please provide a valid e-mail address',
-        isValidationNeeded: false
-      });
-      return ;
-    }
-
-    if (this.state.email.substr(this.state.email.length - 3) === '.co') {
-      this.disableArrow();
-      this.setState({
-        message: 'We are not accepting subscriptions from Colombia emails',
-        isValidationNeeded: false
-      });
-      return ;
-    }
-
-    if (!this.state.termsOfService) {
-      this.disableArrow();
-      this.setState({
-        message: 'You must accept the terms and conditions',
-        isValidationNeeded: false
-      });
-      return ;
+          return ;
+        }
     }
 
     this.hideMessage();
@@ -91,7 +73,6 @@ class Form extends React.Component {
   }
 
   handleSubmit = (event) => {
-
     const data = {
       email: this.state.email
     };
