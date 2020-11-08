@@ -4,8 +4,15 @@
   header("Access-Control-Allow-Methods: POST");
   header("Access-Control-Allow-Headers: Content-Type, Authorization");
   header("Content-type:application/json");
-  $data = json_decode(file_get_contents("php://input"));
-  echo "received data";
-  print_r($data);
+
+  include '../db/requests.php';
+
+  $db = new dbRequests();
+
+  $data = json_decode(file_get_contents("php://input"), true);
+
+  $email = $data['email'];
+
+  $db->insertEmail($email);
 
 ?>
