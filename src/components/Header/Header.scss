@@ -52,10 +52,8 @@
       color: $default-text-color;
       text-decoration: none;
       margin-left: 30px;
-      font-size: 16px;
 
       @include mobile-width {
-        font-size: 14px;
         margin-left: 21px;
       }
     }

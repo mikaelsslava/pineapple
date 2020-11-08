@@ -16,12 +16,11 @@
     p {
       position: absolute;
       margin: 78px 2px 0;
-      color: $default-text-color;
-      font-family: Arial;
       font-size: 14px;
 
       @include mobile-width {
-        margin: 2px 5px 0;
+        margin: 2px 0 0;
+        font-size: 12px;
       }
     }
   }
